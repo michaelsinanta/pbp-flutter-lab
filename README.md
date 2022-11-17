@@ -36,3 +36,38 @@ Const berperilaku seperti final namun perbedaannya adalah const membuat variabel
 6. Mengaplikasikan onPressed yang sesuai dengan fungsi dari masing-masing button.
 7. Menambahkan if (_counter > 0) sebelum FloatingActionButton untuk decrement sehingga bisa hilang dari layar jika counter bernilai 0.
 8. Melakukan add, commit, dan push ke GitHub.
+
+# Tugas 8: Flutter Form
+### Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement. 
+Navigator.push berfungsi untuk mengganti screen ke screen lainnya namun route baru hanya ditambahkan ke navigator sehingga route yang lama tidak dihapus. Sementara, Navigator.pushReplacement berfungsi juga untuk mengganti screen ke screen lainnya namun route yang lama dibuang sehingga hanya route baru yang ditampilkan dan kita tidak bisa kembali ke route yang lama.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya. 
+1. Text = bertugas menampilkan string teks dengan gaya tunggal
+2. MaterialApp = bertugas untuk membungkus sejumlah widget yang biasanya diperlukan untuk aplikasi Material Design.
+3. AppBar = bertugas untuk menempatkan bilah aplikasi sebagai widget dengan ketinggian yang tetap di bagian atas layar.
+4. Row = mengatur tata letak daftar child widget dalam arah horizontal.
+5. Column = mengatur tata letak daftar child widget dalam arah vertikal.
+6. Scaffold = berfungsi untuk mengimplementasikan struktur tata letak visual desain material dasar dan menyediakan banyak widget/API untuk menampilkan Drawer, SnackBar, AppBar, dan masih banyak lainnya.
+7. Padding = berfungsi untuk menempatkan ruang kosong di sekitar widget.
+8. FloatingActionButton = tombol aksi yang berbentuk lingkaran dan mengarahkan kursor ke konten untuk memanggil tindakan utama pada aplikasi.
+9. SingleChildScrollView = sebuah kotak di mana satu widget dapat di-scroll.
+10. ListView = daftar widget yang dapat di-scroll dan disusun secara linier.
+
+### Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed). 
+1. onPressed
+2. onTap
+3. onChanged
+4. onSaved
+5. onEnd
+
+### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Widget Navigator menampilkan layar seperti sebuah tumpukan (stack). Untuk mengakses sebuah halaman baru, maka kita dapat mengakses Navigator melalui BuildContext dengan memanggil push() atau pop().
+ 
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat halaman form budget di form.dart sebagai page untuk mengisi form.
+2. Membuat empat elemen yaitu elemen input dengan tipe data String berupa judul budget, elemen input dengan tipe data int berupa nominal budget, elemen dropdown yang berisi tipe budget dengan pilihan pemasukan dan pengeluaran, dan elemen date untuk tanggal. Lalu, menambahkan button untuk menyimpan budget.
+3. Membuat atribut untuk mengisi data-data yang dibutuhkan dan membuat validator untuk mengecek apakah text fieldnya kosong atau tidak sebelum dikirim.
+4. Membuat halaman data budget di data.dart untuk menampilkan budget yang telah dibuat.
+5. Membuat class dan list budget di dalam halaman data budget sehingga data yang dikirimkan dapat dimasukkan ke dalam list untuk segera ditampilkan.
+6. Membuat halaman widget di file terpisah yaitu di drawer.dart. 
+7. Melakukan add, commit, dan push ke GitHub.
