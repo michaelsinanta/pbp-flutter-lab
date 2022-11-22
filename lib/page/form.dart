@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/data.dart';
+import 'package:counter_7/page/data.dart';
 import 'package:counter_7/drawer.dart';
 
 class MyFormPage extends StatefulWidget {
@@ -21,7 +21,7 @@ class _MyFormPageState extends State<MyFormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Form Budget'),
+          title: const Text('Form Budget'),
         ),
         drawer: externalWidget(context),
         body: Form(
