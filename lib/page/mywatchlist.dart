@@ -28,7 +28,7 @@ class _MyWatchListPageState extends State<MyWatchListPage> {
                   return Column(
                     children: const [
                       Text(
-                        "Tidak ada to do list :(",
+                        "Tidak ada watch list :(",
                         style:
                             TextStyle(color: Color(0xff59A5D8), fontSize: 20),
                       ),
@@ -45,8 +45,12 @@ class _MyWatchListPageState extends State<MyWatchListPage> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15.0),
-                          boxShadow: const [
-                            BoxShadow(color: Colors.black, blurRadius: 2.0)
+                          boxShadow: [
+                            BoxShadow(
+                                color: snapshot.data![index].fields.watched
+                                    ? Colors.blue
+                                    : Colors.red,
+                                blurRadius: 3.0)
                           ]),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
